@@ -1,0 +1,48 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create a virtual network
+    azure_rm_virtualnetwork:
+      name: testvnet
+      resource_group: zhijzhao
+      address_prefixes_cidr:
+          - "10.1.0.0/16"
+          - "172.100.0.0/16"
+      dns_servers:
+          - "127.0.0.1"
+          - "127.0.0.2"
+      tags:
+          testing: testing
+          delete: on-exit
+  - name: Create a subnet
+    azure_rm_subnet:
+      name: testsubnet
+      virtual_network_name: testvnet
+      resource_group: zhijzhao
+      address_prefix_cidr: "10.1.0.0/24"
+  - name: Create VMSS
+    azure_rm_virtualmachine_scaleset:
+      resource_group: zhijzhao
+      name: testvmss
+      vm_size: Standard_DS1_v2
+      capacity: 2
+      virtual_network_name: testvnet
+      subnet_name: testsubnet
+      admin_username: zhijzhao
+      ssh_password_enabled: false
+      ssh_public_keys:
+        - path: /home/zhijzhao/.ssh/authorized_keys
+          key_data: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local
+      managed_disk_type: Standard_LRS
+      upgrade_policy: Automatic
+      image:
+        offer: CoreOS
+        publisher: CoreOS
+        sku: Stable
+        version: latest
+      data_disks:
+        - lun: 0
+          disk_size_gb: 64
+          caching: ReadWrite
+          managed_disk_type: Standard_LRS
+  
