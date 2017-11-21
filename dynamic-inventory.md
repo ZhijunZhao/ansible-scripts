@@ -16,7 +16,7 @@ If you don't know the Dynamic Inventory concept, checkout out [Intro to Dynamic 
 
 ## Dynamic Inventory Script
 
-The dynamic inventory script for Azure resource management is called azure_rm.py. You can download it from [here](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py). Please also download the config file [azure_rm.ini]((https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.ini) to the same directory. 
+The dynamic inventory script for Azure resource management is called azure_rm.py. You can download it from [here](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py). Please also download the config file [azure_rm.ini](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.ini) to the same directory. 
 
 Run below command to add executable permission to the script.
 
