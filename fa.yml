@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  tasks:
+  - name: create storage account for function apps
+    azure_rm_storageaccount:
+      resource_group: zhijzhao
+      name: azfunccistor4
+      account_type: Standard_LRS
+
+  - name: create basic function app
+    azure_rm_functionapp:
+      resource_group: zhijzhao
+      name: azfuncci
+      storage_account: azfunccistor4
+
