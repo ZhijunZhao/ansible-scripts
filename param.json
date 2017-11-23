@@ -1,0 +1,39 @@
+{
+    "ANSIBLE_MODULE_ARGS":{
+        "name":"acctestcontservice5",
+        "resource_group":"zhijzhao2",
+        "location":"eastus", 
+        "master_profile":[
+            {  
+            "count":1,
+            "dns_prefix":"acsk8smaster5",
+            "vm_size":"1"
+            }
+        ],
+        "linux_profile":[
+            {  
+            "admin_username":"azureuser",
+            "ssh_key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local"
+            }
+        ],
+        "diagnostics_profile":false,
+        "agent_pool_profiles":[  
+            {  
+                "count":1,
+                "vm_size":"Standard_D2_v2",
+                "name":"default",
+                "dns_prefix":"acsk8sagent5"
+            }
+        ],
+        "orchestration_platform":"Kubernetes",
+        "service_principal":[
+            {  
+            "client_secret":"be9fff82-6dcb-4e85-9f15-a9aab5b1f422",
+            "client_id":"ecfba1ce-9e48-40b6-92f4-21b9dda8ebee"
+            }
+        ],
+        "tags":{  
+           "Environment":"Production"
+        }
+    }
+}

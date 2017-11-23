@@ -1,0 +1,165 @@
+https://management.azure.com/subscriptions/ba4c611a-4cb0-4cc5-94b7-f9f71ed17fee/resourceGroups/zhijzhao2/providers/Microsoft.ContainerService/containerServices/acctestcontservice1?api-version=2017-07-01
+
+api-version
+2017-07-01
+['Content-Type'] = 'application/json; charset=utf-8'
+
+
+{  
+   "location":"eastus",
+   "properties":{  
+      "masterProfile":{  
+         "count":1,
+         "dnsPrefix":"acsk8smasterdnszzzz",
+         "vmSize":"1",
+         "firstConsecutiveStaticIP":"10.240.255.5"
+      },
+      "linuxProfile":{  
+         "adminUsername":"azureuser",
+         "ssh":{  
+            "publicKeys":[  
+               {  
+                  "keyData":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local"
+               }
+            ]
+         }
+      },
+      "diagnosticsProfile":{  
+         "vmDiagnostics":{  
+            "enabled":False
+         }
+      },
+      "agentPoolProfiles":[  
+         {  
+            "count":1,
+            "osType":"Linux",
+            "vmSize":"Standard_D2_v2",
+            "name":"default",
+            "dnsPrefix":"acsk8sagent"
+         }
+      ],
+      "orchestratorProfile":{  
+         "orchestratorType":"Kubernetes"
+      },
+      "servicePrincipalProfile":{  
+         "secret":"be9fff82-6dcb-4e85-9f15-a9aab5b1f422",
+         "clientId":"ecfba1ce-9e48-40b6-92f4-21b9dda8ebee"
+      }
+   },
+   "tags":{  
+      "Environment":"Production"
+   }
+}
+
+
+
+
+{'linux_profile': <azure.mgmt.containerservice.models.container_service_linux_profile.ContainerServiceLinuxProfile object at 0x1107d1350>, 'master_profile': <azure.mgmt.containerservice.models.container_service_master_profile.ContainerServiceMasterProfile object at 0x1107e2250>, 'name': u'acctestcontservice3', 'tags': {u'Environment': u'Production'}, 'service_principal_profile': <azure.mgmt.containerservice.models.container_service_service_principal_profile.ContainerServiceServicePrincipalProfile object at 0x1107e21d0>, 'custom_profile': None, 'agent_pool_profiles': [<azure.mgmt.containerservice.models.container_service_agent_pool_profile.ContainerServiceAgentPoolProfile object at 0x1107e2150>], 'provisioning_state': u'Succeeded', 'location': u'eastus', 'windows_profile': None, 'type': u'Microsoft.ContainerService/ContainerServices', 'id': u'/subscriptions/ba4c611a-4cb0-4cc5-94b7-f9f71ed17fee/resourceGroups/zhijzhao2/providers/Microsoft.ContainerService/containerServices/acctestcontservice3', 'orchestrator_profile': <azure.mgmt.containerservice.models.container_service_orchestrator_profile.ContainerServiceOrchestratorProfile object at 0x1107e2210>, 'diagnostics_profile': <azure.mgmt.containerservice.models.container_service_diagnostics_profile.ContainerServiceDiagnosticsProfile object at 0x1107e20d0>}
+
+\nACS instance : acctestcontservice3 found\n
+
+{'state': {'linux_profile': {'ssh_key': u'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local', 'admin_username': u'azureuser'}, 'master_profile': {'count': 1, 'vm_size': u'Standard_D2_v2', 'fqdn': u'acsk8smaster3.eastus.cloudapp.azure.com', 'dns_prefix': u'acsk8smaster3'}, 'name': u'acctestcontservice3', 'tags': {u'Environment': u'Production'}, 'service_principal_profile': <azure.mgmt.containerservice.models.container_service_service_principal_profile.ContainerServiceServicePrincipalProfile object at 0x11110a650>, 'agent_pool_profiles': [{'count': 1, 'vm_size': u'Standard_D2_v2', 'fqdn': u'', 'dns_prefix': u'acsk8sagent3', 'name': u'default'}], 'provisioning_state': u'Succeeded', 'diagnostics_profile': {'vm_diagnostics': False}, 'type': u'Microsoft.ContainerService/ContainerServices', 'id': u'/subscriptions/ba4c611a-4cb0-4cc5-94b7-f9f71ed17fee/resourceGroups/zhijzhao2/providers/Microsoft.ContainerService/containerServices/acctestcontservice3', 'orchestrator_profile': {'orchestrator_type': 'ContainerServiceOrchestratorTypes.kubernetes'}, 'location': u'eastus'}, 'changed': True}
+
+
+
+
+{
+  "type": "Microsoft.ContainerService/ContainerServices",
+  "location": "eastus",
+  "tags": {
+    "Environment": "Production"
+  },
+  "id": "/subscriptions/ba4c611a-4cb0-4cc5-94b7-f9f71ed17fee/resourceGroups/zhijzhao2/providers/Microsoft.ContainerService/containerServices/acctestcontservice5",
+  "name": "acctestcontservice5",
+  "properties": {
+    "provisioningState": "Creating",
+    "orchestratorProfile": {
+      "orchestratorType": "Kubernetes"
+    },
+    "masterProfile": {
+      "count": 1,
+      "dnsPrefix": "acsk8smaster5",
+      "vmSize": "Standard_D2_v2"
+    },
+    "agentPoolProfiles": [
+      {
+        "name": "default",
+        "count": 1,
+        "vmSize": "Standard_D2_v2",
+        "dnsPrefix": "acsk8sagent5",
+        "osType": "Linux"
+      }
+    ],
+    "linuxProfile": {
+      "ssh": {
+        "publicKeys": [
+          {
+            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local"
+          }
+        ]
+      },
+      "adminUsername": "azureuser"
+    },
+    "servicePrincipalProfile": {
+      "clientId": "ecfba1ce-9e48-40b6-92f4-21b9dda8ebee"
+    },
+    "diagnosticsProfile": {
+      "vmDiagnostics": {
+        "enabled": false
+      }
+    }
+  }
+}
+
+
+
+
+
+
+{
+  "type": "Microsoft.ContainerService/ContainerServices",
+  "location": "eastus",
+  "tags": {
+    "Environment": "Production"
+  },
+  "id": "/subscriptions/ba4c611a-4cb0-4cc5-94b7-f9f71ed17fee/resourceGroups/zhijzhao2/providers/Microsoft.ContainerService/containerServices/acctestcontservice5",
+  "name": "acctestcontservice5",
+  "properties": {
+    "provisioningState": "Creating",
+    "orchestratorProfile": {
+      "orchestratorType": "Kubernetes"
+    },
+    "masterProfile": {
+      "count": 1,
+      "dnsPrefix": "acsk8smaster5",
+      "vmSize": "Standard_D2_v2"
+    },
+    "agentPoolProfiles": [
+      {
+        "name": "default",
+        "count": 1,
+        "vmSize": "Standard_D2_v2",
+        "dnsPrefix": "acsk8sagent5",
+        "osType": "Linux"
+      }
+    ],
+    "linuxProfile": {
+      "ssh": {
+        "publicKeys": [
+          {
+            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local"
+          }
+        ]
+      },
+      "adminUsername": "azureuser"
+    },
+    "servicePrincipalProfile": {
+      "clientId": "ecfba1ce-9e48-40b6-92f4-21b9dda8ebee"
+    },
+    "diagnosticsProfile": {
+      "vmDiagnostics": {
+        "enabled": false
+      }
+    }
+  }
+}

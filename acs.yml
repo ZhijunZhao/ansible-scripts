@@ -3,13 +3,14 @@
   tasks:
   - name: Create an azure container services instance running Kubernetes
     azure_rm_acs:
-      name: acctestcontservice1
+      name: acctestcontservice6
       location: eastus
-      resource_group: zhijzhao
+      resource_group: zhijzhao3
       orchestration_platform: Kubernetes
       master_profile:
           - count: 1
-            dns_prefix: acsk8smasterdns
+            vm_size: Standard_D2_V2
+            dns_prefix: acsk8smaster6
       linux_profile:
           - admin_username: azureuser
             ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpunCp6SYBm8C/VQUi9YY0KAQNV6HzdGbLuyMz0/4z3BpXwbm97OEPX18EKsipiQgN9lZ2IbgkKS6eJIbqaW+lUeopmw0SN+0FqlZKwPnIy6OR0N8Ji29xlTXc0+TJ/duXUdzW2/eSY+/apbS8zNf2ZgUO6S1jimuJXnAr7rtOBCKmXWh8EoqYmk8sufsCeLvl0HKNtMrrFiAhsEdxWwH7T65yDGMuwV96lR+2BYRx6ff1I/wZtZBevS+2cb/5OaPw6dpL8Tr3JwoeP6FWgRtPaoyspxgHBGqM+DDEaAZ8sd6a2JBkTq+pbsPKBRioFsbgyRflX/uvTdQFQ8tCTd9R zhijzhao@Zhijuns-MacBook-Pro.local
@@ -19,7 +20,7 @@
       agent_pool_profiles:
           - name: default
             count: 1
-            dns_prefix: acsk8sagent
+            dns_prefix: acsk8sagent6
             vm_size: Standard_D2_v2
       diagnostics_profile: false
       tags:
