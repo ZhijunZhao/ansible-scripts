@@ -9,7 +9,7 @@
       orchestration_platform: Kubernetes
       master_profile:
           - count: 1
-            vm_size: Standard_D2_V2
+            vm_size: Standard_D1_v2
             dns_prefix: acsk8smaster6
       linux_profile:
           - admin_username: azureuser
