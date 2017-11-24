@@ -1,13 +1,13 @@
 {
     "ANSIBLE_MODULE_ARGS":{
         "name":"acctestcontservice6",
-        "resource_group":"zhijzhao3",
+        "resource_group":"zhijzhao",
         "location":"eastus", 
         "master_profile":[
             {  
             "count":1,
             "dns_prefix":"acsk8smaster6",
-            "vm_size":"Standard_D1_v2"
+            "vm_size":"Standard_d2_v2"
             }
         ],
         "linux_profile":[
