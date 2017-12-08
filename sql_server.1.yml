@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  roles:
+  - { role: Azure.preview-modules }
+  tasks:
+  - name: Create Servers
+    azure_rm_sql_server:
+      resource_group: zhijzhao33
+      name: zims-server3
+      location: eastus
+      administrator_login: mylogin
+      administrator_login_password: Testpasswordxyz12!

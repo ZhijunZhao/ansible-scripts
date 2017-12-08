@@ -1,0 +1,27 @@
+- name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+  - name: Create virtual network
+    azure_rm_virtualnetwork:
+        resource_group: zhijzhao
+        name: testvm001
+        address_prefixes: "10.10.0.0/16"
+
+  - name: Add subnet
+    azure_rm_subnet:
+        resource_group: zhijzhao
+        name: testvm001
+        address_prefix: "10.10.0.0/24"
+        virtual_network: testvm001
+
+  - name: Create public ip
+    azure_rm_publicipaddress:
+        resource_group: zhijzhao
+        allocation_method: Static
+        name: testvm001
+
+  - name: Create security group
+    azure_rm_securitygroup:
+        resource_group: zhijzhao
+        name: testvm001
